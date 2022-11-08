@@ -34,6 +34,7 @@ use crate::manager::BrowserManager;
 mod chrome;
 mod downloads;
 mod edge;
+mod error;
 mod files;
 mod firefox;
 mod manager;

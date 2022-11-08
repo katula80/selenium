@@ -59,7 +59,7 @@ fn ok_test(
 
 #[rstest]
 #[case("wrong-browser", "", "", 1)]
-#[case("chrome", "wrong-version", "", 101)]
+#[case("chrome", "wrong-version", "", 1)]
 #[case("chrome", "", "wrong-version", 101)]
 fn error_test(
     #[case] browser: String,

@@ -1,6 +1,6 @@
 [package]
 name = "selenium-manager"
-version = "1.0.0-M1"
+version = "1.0.0-M2"
 edition = "2021"
 
 [dependencies]

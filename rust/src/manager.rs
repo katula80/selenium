@@ -48,8 +48,7 @@ pub trait BrowserManager {
         let driver_url = Self::get_driver_url(self, driver_version, os, arch);
         let (_tmp_folder, driver_zip_file) = download_driver_to_tmp_folder(driver_url)?;
         let driver_path_in_cache = Self::get_driver_path_in_cache(self, driver_version, os, arch);
-        uncompress(&driver_zip_file, driver_path_in_cache);
-        Ok(())
+        uncompress(&driver_zip_file, driver_path_in_cache)
     }
 }
 
@@ -156,11 +155,14 @@ pub fn detect_browser_version(
 }
 
 pub fn get_major_version(full_version: &str) -> String {
-    let version_vec: Vec<&str> = full_version.split('.').collect();
-    version_vec.first().unwrap().to_string()
+    get_index_version(full_version, 0)
 }
 
 pub fn get_minor_version(full_version: &str) -> String {
+    get_index_version(full_version, 1)
+}
+
+fn get_index_version(full_version: &str, index: usize) -> String {
     let version_vec: Vec<&str> = full_version.split('.').collect();
-    version_vec.get(1).unwrap().to_string()
+    version_vec.get(index).unwrap().to_string()
 }
