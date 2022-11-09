@@ -8,6 +8,6 @@ runs:
   using: "composite"
   steps:
     - run: |
-        cp .github/.bazelrc.local .
+        copy .github\.bazelrc.local .
         bazel ${{ inputs.command }}
-      shell: bash
+      shell: cmd
