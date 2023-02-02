@@ -45,7 +45,7 @@
     "@types/react-router-dom": "^5.3.3",
     "graphql": "^16.6.0",
     "graphql.macro": "^1.4.2",
-    "jszip": "^3.7.1",
+    "jszip": "^3.8.0",
     "pretty-ms": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
